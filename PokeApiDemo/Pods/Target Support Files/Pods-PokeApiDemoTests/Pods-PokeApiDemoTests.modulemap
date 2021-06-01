@@ -1,0 +1,6 @@
+framework module Pods_PokeApiDemoTests {
+  umbrella header "Pods-PokeApiDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
