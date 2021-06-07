@@ -29,5 +29,12 @@ class PokeApiDemoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testSimple() throws {
+        let util = Util()
+        let number = util.getIdPoke(url: "https://pokeapi.co/api/v2/pokemon/7")
+        
+        XCTAssertEqual(number, 7, "Is correct")
+    }
 
 }

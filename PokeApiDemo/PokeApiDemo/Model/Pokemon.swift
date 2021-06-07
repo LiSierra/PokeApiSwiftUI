@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 struct Pokemon: Identifiable, Hashable, Codable {
     var id: Int?
     let name: String?
+    let url: String?
     let image: Data?
     var isLike: Bool?
     

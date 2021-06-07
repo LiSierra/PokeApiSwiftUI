@@ -15,12 +15,14 @@ class ManagerImage: ObservableObject {
     func getImage(id: Int,
                   url: String = Constant.empty) {
         
-        let url = "\(url)\(id)\(Constant.png)"
         
-        do {
-            self.data = try Data(contentsOf: URL(string: url)!)
-        } catch {
-            print("Error")
-        }
+        let url = "\(url)\(id)\(Constant.png)"
+          do {
+               data = try Data(contentsOf: URL(string: url)!)
+          } catch {
+               print("Error")
+          }
+            
+        
     }
 }

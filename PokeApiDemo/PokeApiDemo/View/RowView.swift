@@ -13,6 +13,8 @@ struct RowView: View {
     
     init(pokemon: Pokemon) {
             self.pokemon = pokemon
+            self.manager.getImage(id: self.pokemon.id!,
+                              url: Service.baseImg)
         }
     
     var body: some View {
@@ -30,10 +32,6 @@ struct RowView: View {
             alignment: .topLeading
           )
           .background(Color.clear)
-          .onAppear {
-                self.manager.getImage(id: self.pokemon.id!,
-                                      url: Service.baseImg)
-          }
     }
 }
 

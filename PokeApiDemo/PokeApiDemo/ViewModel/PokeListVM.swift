@@ -12,17 +12,33 @@ class PokeListVM: ObservableObject {
     
     @Published var pokemonList: [Pokemon] = []
     @Published var errorMessage: String = Constant.empty
+    var endPagination = false
     
-    @Published var showAlert: Bool? = false
+    init(){
+        getPokemon(20, offset: 0)
+    }
     
-    func getPokemon() {
-        HttpWebService.consumeService(baseUrl: Service.baseUrl) { response in
+    func getPokemon(_ limit: Int, offset: Int) {
+        let baseUrl = "\(Service.baseUrl)\(Service.limit)\(limit)\(Service.offset)\(offset)"
+        HttpWebService.consumeService(baseUrl: baseUrl) { response in
             switch response {
             case .success(let data):
+                let listManager: [Pokemon]
+                let util = Util()
+                let count = data.deserialize(type: Response.self)?.count ?? 0
                 let response = data.deserialize(type: Response.self)?.results
-                self.pokemonList = response!.enumerated().map { (index, element) in
-                    return Pokemon(id: index + 1, name: element.name?.capitalized, image: nil)
+                if count > self.pokemonList.count {
+                        listManager = response!.enumerated().map { (index, element) in
+                            let id = util.getIdPoke(url: element.url ?? Constant.empty)
+                            return Pokemon(id: id, name:
+                                            element.name?.capitalized,
+                                           url: nil, image: nil)
+                        }
+                    self.pokemonList.append(contentsOf: listManager)
+                } else {
+                    self.endPagination = true
                 }
+                
             case .error(let error):
                 print(error)
                 self.errorMessage = error.localizedDescription

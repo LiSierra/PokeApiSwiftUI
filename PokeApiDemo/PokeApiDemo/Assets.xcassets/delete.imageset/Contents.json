@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "kisspng-symbol-sign-clip-art-delete-button-5abdeb989bce67.1530894715223960566382.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "kisspng-symbol-sign-clip-art-delete-button-5abdeb989bce67.1530894715223960566382-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "kisspng-symbol-sign-clip-art-delete-button-5abdeb989bce67.1530894715223960566382-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

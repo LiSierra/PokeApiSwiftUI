@@ -24,8 +24,9 @@ struct ImageViewContainer: View {
                         .frame(width: 80.0, height: 80.0)
                 )
             }
-        return AnyView(Blinking().frame(width: 100, height: 100)
-                        .foregroundColor(.yellow))
+        return AnyView(ActivityIndicator(isAnimating: .constant(true),
+                                         style: .medium).frame(width: 100, height: 100)
+                                            .foregroundColor(.yellow))
         }
         
         init(with data: Data?){

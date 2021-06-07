@@ -10,6 +10,7 @@ import Foundation
 struct Service {
     static let baseUrl       = "https://pokeapi.co/api/v2/pokemon"
     static let limit         = "?limit="
+    static let offset        = "&offset="
     static let baseSprite    = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions"
     static let baseImg       = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
     static let generationI   = "\(baseSprite)/generation-i/red-blue/"
@@ -17,7 +18,7 @@ struct Service {
     static let generationIII = "\(baseSprite)/generation-iii/emerald/"
     static let headerKey     = "Content-Type"
     static let headerValue   = "application/json; charset=utf-8"
-    static let timeout       = 5
+    static let timeout       = 15
 }
 
 struct Constant {

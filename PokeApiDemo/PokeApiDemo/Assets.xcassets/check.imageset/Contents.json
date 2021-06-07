@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "kisspng-check-mark-computer-icons-voting-clip-art-haken-5b414ede3a4d85.2421162215310066862388-1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "kisspng-check-mark-computer-icons-voting-clip-art-haken-5b414ede3a4d85.2421162215310066862388.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "kisspng-check-mark-computer-icons-voting-clip-art-haken-5b414ede3a4d85.2421162215310066862388-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
